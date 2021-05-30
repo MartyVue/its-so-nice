@@ -1,8 +1,16 @@
 function formatDate(timestamp) {
     let date = new Date(timestamp);
     let hours = date.getHours();
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
     let minutes = date.getMinutes();
-    let day = date.getDay();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
 }
 
@@ -15,10 +23,11 @@ function displayTemperature(response) {
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
-    dateElement.innerHTML = "Sunday 09:00";
+    dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let apiKey = "5ef560c2739fa62b5e22bb83083603a3";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Broomfield&appid=${apiKey}&units=metric`; 
+let city = "Dallas"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
 
 axios.get(apiUrl).then(displayTemperature);
