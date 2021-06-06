@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
-  <body>
+  <body id="gradient">
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
@@ -55,80 +55,7 @@
               </div>
             </div>
             </div>
-            <div class="weekly-forecast">
-            <div class="row">
-            <div class="col-2">
-              <div class="forecast-day">Today</div>
-              <img src="http://openweathermap.org/img/wn/01n@2x.png" 
-              alt=""
-              width="55">
-              <div class="temperature">
-                <span class="temperature-max">
-                  58°</span>/
-                  <span class="tempurate-min">37°
-                    </span>
-                  </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-day">Mon 31</div>
-               <img src="http://openweathermap.org/img/wn/01n@2x.png" 
-              alt=""
-              width="55">
-              <div class="temperature">
-                <span class="temperature-max">
-                  58°</span>/
-                  <span class="temperature-min">44°
-                  </span>
-                  </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-day">Tue 1</div>
-               <img src="http://openweathermap.org/img/wn/01n@2x.png" 
-              alt=""
-              width="55">
-              <div class="temperature">
-                  <span class="temperature-max">
-                  69°</span>/
-                  <span class="temperature-min">51°
-                  </span>
-                </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-day">Wed 2</div>
-               <img src="http://openweathermap.org/img/wn/01n@2x.png" 
-              alt=""
-              width="55">
-              <div class="temperature">
-                  <span class="temperature-max">
-                  74°</span>/
-                  <span class="temperature-min">52°
-                  </span>
-                  </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-day">Thu 3</div>
-               <img src="http://openweathermap.org/img/wn/01n@2x.png" 
-              alt=""
-              width="55">
-              <div class="temperature">
-                  <span class="temperature-max">
-                  79°</span>/
-                  <span class="temperature-min">54°
-                  </span>
-                </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-day">Fri 4</div>
-               <img src="http://openweathermap.org/img/wn/01n@2x.png" 
-              alt=""
-              width="55">
-              <div class="temperature">
-                  <span class="temperature-max">
-                  82°</span>/
-                  <span class="temperature-min">58°
-                  </span>
-                </div>
-            </div>
+            <div class="weekly-forecast" id="forecast">
           </div>
           </div>
           </div>
@@ -140,6 +67,11 @@
             >
             by Martha Vue
           </small>
+          <smaller id="gradient">
+            <input class="color1" type ="color" name="color1" value="#FFFB80">
+            <input class="color2" type ="color" name="color2" value="#FD81A7">
+            <h3></h3>
+          </smaller>
         </div>
       </div>
     </div>
