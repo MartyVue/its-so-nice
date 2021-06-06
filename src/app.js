@@ -102,3 +102,4 @@ color2.addEventListener("input", setGradient())
 
 // 255 251 128
 // 253 129 167
+// 253 129 167
