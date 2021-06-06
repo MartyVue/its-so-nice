@@ -15,7 +15,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-    console.log(response.data);
+    console.log("response.data", response.data);
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
     let descriptionElement = document.querySelector("#description");
@@ -40,12 +40,13 @@ function search(city) {
 
 function handleSubmit(event) {
     event.preventDefault();
-    let cityInputElement = document.querySelector("city-input");
+    let cityInputElement = document.querySelector("#city-input");
+    console.log("value", cityInputElement);
     search(cityInputElement.value);
 }
 
-search("Broomfield");
+search("Atlanta");
 
-
-let form = document.querySelector("search-form");
-form.addEventListener("sumbit", handleSubmit);
+let form = document.querySelector("#search-form");
+console.log("form?", form)
+form.addEventListener("submit", handleSubmit);
