@@ -96,6 +96,11 @@ input {
   border-width: 1px;
 }
 
+.color1,
+.color2 {
+  display: none;
+}
+
 /* input[type="submit"] {
   background: url(/images/pinkmagnify.png);
   border: 0;
